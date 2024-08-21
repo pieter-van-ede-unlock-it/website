@@ -1,0 +1,21 @@
+body {
+    header {
+        display: flex;
+        align-items: center;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
+.company-logo img {
+    height: 8em;
+}
+
+.myself img {
+    height: 16em;
+}
+
