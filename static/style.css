@@ -1,21 +1,116 @@
+:root {
+    --theme-color-orange: #f26a11;
+    --theme-color-blue: #0c70d9;
+    
+}
+
+figure {
+    margin: 0;
+}
+
 body {
-    header {
-        display: flex;
-        align-items: center;
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    display: grid;
+    grid-template-columns: 25em 1fr;
+    grid-template-rows: 10em 1fr;
+    grid-template-areas: 
+        "logo navigation"
+        "side content";
+
+    figure {
+        grid-area: logo;
+        align-self: center;
+        justify-self: stretch;
+
+        margin-left: 2.25em;
+    }
+
+    nav {
+        grid-area: navigation;
+        justify-self: start;
+        align-self: center;
+
+        font-weight: 900;
+        font-size: 2em;
+
+        margin-top: 1.7em;
+
+        a,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: var(--theme-color-blue);
+        }
+
+        a:hover {
+            color: var(--theme-color-orange);
+        }
+
+        a + a:before {
+            content: " \2022  ";
+            color: var(--theme-color-orange);
+        }
     }
     
     aside {
+        grid-area: side;
+        align-self: start;
+        justify-self: stretch;
+
         display: flex;
         flex-direction: column;
-        align-content: center;
+
+        border-top-width: 0.4em;
+        border-top-color: var(--theme-color-blue);
+        border-top-style: solid;
+        padding-top: 1.5em;
+
+        padding-left: 2.75em;
+    }
+
+    > section {
+        grid-area: content;
+        align-self: start;
+        justify-self: stretch;
+
+        border-top-width: 0.4em;
+        border-top-color: var(--theme-color-blue);
+        border-top-style: solid;
+        padding-top: 1.5em;
     }
 }
 
+dl {
+    dt {
+        font-weight: 600;
+        font-size: 2em;
+        color: var(--theme-color-blue);
+    }
+    dt:after {
+        content: ".";
+        color: var(--theme-color-orange);
+    }
+
+    dd {
+        margin-bottom: 1em;
+    }
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--theme-color-blue);
+}
+
 .company-logo img {
-    height: 8em;
+    width: 19.5em;
 }
 
 .myself img {
-    height: 16em;
+    width: 19.5em;
 }
 

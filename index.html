@@ -2,35 +2,57 @@
 <html lang="nl">
     <head>
         <title>UnlockIT</title>
+
         <link rel="stylesheet" href="/static/style.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <figure class="company-logo">
-                <img src="./static/images/logo-groot.svg" />
-            </figure>
+        <figure class="company-logo">
+            <img src="./static/images/logo-groot.svg" />
+        </figure>
 
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Over mij</a>
-                <a href="#">Diensten</a>
-                <a href="#">Anderen over mij</a>
-                <a href="#">Blog</a>
-            </nav>
-        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About me</a> <!-- Over mij -->
+            <a href="#">Services</a> <!-- Diensten -->
+            <a href="#">Testimonials</a> <!-- Anderen over mij -->
+            <a href="#">Blog</a> <!-- Blog -->
+        </nav>
+
         <aside>
-            <figure class="myself">
-                <img src="./static/images/pieter.jpg" />
-            </figure>
-
             <p>heel kort mijzelf in notedop</p>
 
             <ul>
                 <li>linkedin</li>
             </ul>
         </aside>
+
         <section>
-            allerlei info over mij
+            <dl>
+                <dt>Passionate</dt>
+                <dd>I am passionate about IT. From frontend to backend, CI/CD to cloud, languages to frameworks.</dd>
+
+                <dt>Results driven</dt>
+                <dd>Technology is only great when it helps an organisation achieve it's goal. I always strive to bring an organisation to the next step.</dd>
+
+                <dt>Connecting</dt>
+                <dd>Technology often has many stakeholders. Developers, business, architecture and security work together to deliver. I always try to connect with all stakeholders so they understand each others viewpoints.</dd>
+                
+                <dt>Innovation</dt>
+                <dd>Technology holds the potential to help organisations get to the next level. I am always on the lookout for technologies (or applications thereof) that can help an organisation accelerate.</dd>
+            </dl>
+
+            <section>
+                <h1>About me</h1>
+                story about who I am
+
+                <figure class="myself">
+                    <img src="./static/images/pieter.jpg" />
+                </figure>
+            </section>
         </section>
     </body>
 </html>
