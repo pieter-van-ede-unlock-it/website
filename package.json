@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/pieter-van-ede-unlock-it/website#readme",
   "dependencies": {
-    "@phosphor-icons/core": "^2.1.1"
+    "@phosphor-icons/core": "^2.1.1",
+    "@shoelace-style/shoelace": "^2.16.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

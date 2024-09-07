@@ -5,21 +5,31 @@
 
         <link rel="stylesheet" href="/static/style.css">
         
+        <!-- TODO fallback to local font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- decide between npm or CDN -->
+        <link rel="stylesheet" href="/shoelace/themes/light.css" />
+        <script type="module" data-shoelace="/shoelace">
+            import '/shoelace/components/carousel/carousel.js';
+            import '/shoelace/components/carousel-item/carousel-item.js';
+        </script>
     </head>
     <body>
-        <figure class="company-logo">
-            <img src="./static/images/logo-groot.svg" />
-        </figure>
+        <header>
+            <figure class="company-logo">
+                <img src="./static/images/logo-groot.svg" />
+            </figure>
 
-        <nav>
-            <a href="#">Services</a> <!-- Diensten -->
-            <a href="#">Testimonials</a> <!-- Anderen over mij -->
-            <a href="#">About me</a> <!-- Over mij -->
-            <a href="#">Blog</a> <!-- Blog -->
-        </nav>
+            <nav>
+                <a href="#">Services</a> <!-- Diensten -->
+                <a href="#">Testimonials</a> <!-- Anderen over mij -->
+                <a href="#">About me</a> <!-- Over mij -->
+                <a href="#">Blog</a> <!-- Blog -->
+            </nav>
+        </header>
 
         <aside>
             <dl>
@@ -80,8 +90,37 @@
 
             <hr>
 
+            <section class="testimonials">
+                <h2>What people say about me</h2>
+
+                <sl-carousel pagination navigation mouse-dragging loop style="--aspect-ratio: auto;">
+                    <sl-carousel-item>
+                        <blockquote class="triangle-border">
+                            <p>I knew Pieter because he worked in a feature team I talked to regularly, and asked him to join my (Platform) team, basically because Pieter is the kind of guy you would want in any team. A critical thinker who challenges the status quo where needed.</p>
+                            <ul>
+                                <li>He knows the development stack you throw at him - or he will make sure he'll learn it quickly enough. </li>
+                                <li>He understands software development is there to serve a need from the business - and can think along with product management to get the best results. </li>
+                                <li>He understands there's more in life than just work - and takes a genuine interest in the people he works with.</li>
+                            </ul>
+                            <p>I can recommend Pieter in many roles, and the one I have come to know him in - Lead Developer - he did an outstanding job!</p>
+                        </blockquote>
+                        <figure>
+                            <img src="/static/images/jouke.jpeg">
+                        </figure>
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <blockquote class="triangle-border">
+                            <p>Pieter is a passionate and experienced lead developer, who is not only an excellent developer, but he is also a conceptual thinker and easily thinks out of the box. He is a good listener and can explain difficult technical solutions in a simple way. He also presents well and entertaining. It is really a joy to work with Pieter!</p>
+                        </blockquote>
+                        <figure>
+                            <img src="/static/images/helen.jpeg">
+                            <figcaption>Helen Blom</figcaption>
+                        </figure>
+                    </sl-carousel-item>
+                </sl-carousel>
+            </section>
+
             <section>
-                <h1>About me</h1>
                 story about who I am
 
                 <figure class="myself">
