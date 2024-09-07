@@ -95,17 +95,15 @@ body {
 
     > section {
         grid-area: content;
-
         padding-top: 1.5em;
     }
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 2em;
-    color: var(--theme-color-blue);
+section.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
-
 
 
 .myself img {
