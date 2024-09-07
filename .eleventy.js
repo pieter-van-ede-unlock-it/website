@@ -6,8 +6,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginIcons, {
         sources: [
             {
-                name: 'phosphor-bold',
-                path: 'node_modules/@phosphor-icons/core/assets/bold'
+                name: 'phosphor',
+                path: 'node_modules/@phosphor-icons/core/assets/duotone'
             }
         ]
     });
