@@ -1,7 +1,10 @@
 :root {
-    --theme-color-orange: #f26a11;
-    --theme-color-blue: #0c70d9;
-    
+    --theme-color-orange: hsl(24, 90%, 51%); /*#f26a11;*/
+    --theme-color-blue:hsl(211, 90%, 45%); /*#0c70d9;*/
+    --theme-color-light-blue: hsl(211, 90%, 95%);
+
+    --header-seperation-border: 6px solid var(--theme-color-blue);
+    --gutter-between-side-and-main: 2em;
 }
 
 figure {
@@ -21,23 +24,26 @@ body {
         "logo navigation"
         "side content";
 
-    figure {
+    figure.company-logo {
         grid-area: logo;
-        align-self: center;
-        justify-self: stretch;
+        border-bottom: var(--header-seperation-border);
+        display: flex;
+        justify-content: center;
+        padding-right: var(--gutter-between-side-and-main);
 
-        margin-left: 2.25em;
+        img {
+            width: 20em;
+        }
     }
 
     nav {
         grid-area: navigation;
-        justify-self: start;
-        align-self: center;
 
         font-weight: 900;
         font-size: 2em;
 
-        margin-top: 1.7em;
+        margin-top: 2.68em;
+        border-bottom: var(--header-seperation-border);
 
         a,
         a:visited,
@@ -58,45 +64,39 @@ body {
     
     aside {
         grid-area: side;
-        align-self: start;
-        justify-self: stretch;
 
         display: flex;
         flex-direction: column;
+        align-items: center;;
 
-        border-top-width: 0.4em;
-        border-top-color: var(--theme-color-blue);
-        border-top-style: solid;
         padding-top: 1.5em;
+        border-right: var(--gutter-between-side-and-main) solid white;
+        background-color: var(--theme-color-light-blue);
 
-        padding-left: 2.75em;
+        > dl {
+            width: 19.5em;
+
+            dt {
+                font-weight: 900;
+                font-size: 1em;
+                color: var(--theme-color-blue);
+            }
+
+            dt:after {
+                content: ".";
+                color: var(--theme-color-orange);
+            }
+        
+            dd {
+                margin-bottom: 1em;
+            }
+        }
     }
 
     > section {
         grid-area: content;
-        align-self: start;
-        justify-self: stretch;
 
-        border-top-width: 0.4em;
-        border-top-color: var(--theme-color-blue);
-        border-top-style: solid;
         padding-top: 1.5em;
-    }
-}
-
-dl {
-    dt {
-        font-weight: 600;
-        font-size: 2em;
-        color: var(--theme-color-blue);
-    }
-    dt:after {
-        content: ".";
-        color: var(--theme-color-orange);
-    }
-
-    dd {
-        margin-bottom: 1em;
     }
 }
 
@@ -106,9 +106,7 @@ h1 {
     color: var(--theme-color-blue);
 }
 
-.company-logo img {
-    width: 19.5em;
-}
+
 
 .myself img {
     width: 19.5em;
