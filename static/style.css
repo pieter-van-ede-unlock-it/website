@@ -78,7 +78,7 @@ body {
 
             dt {
                 font-weight: 900;
-                font-size: 1em;
+                font-size: 1.5em;
                 color: var(--theme-color-blue);
             }
 
@@ -97,6 +97,17 @@ body {
         grid-area: content;
         padding-top: 1.5em;
         padding-right: 1.5em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        hr {
+            width: 5em;
+            margin: 2em 0 2em 0;
+            align-self: center;
+            border: 2px solid var(--theme-color-orange);
+        }
     }
 }
 
@@ -107,10 +118,11 @@ section.services {
     justify-items: center;
     align-items: center;
     column-gap: 1.5em;
+    margin-bottom: 5em;
 
     figure {
         display: contents;
-
+        
         svg {
             grid-row-start: icon-start;
             grid-row-end: title-start;
@@ -141,6 +153,12 @@ section.services {
                 hyphens: manual;
             }
         }
+    }
+
+    p.interested {
+        grid-column-start: dev-start;
+        grid-column-end: arch-end;
+        margin-top: 3em;
     }
 
     /* justify-items: center; */
