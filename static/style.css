@@ -184,23 +184,55 @@ section.testimonials {
 }
 
 sl-carousel-item {
+    /* align-self: flex-start; */
 
-    figure {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    display: grid;
+        grid-template-columns: 1fr [card-start] auto [card-end] 1fr;
 
-        img {
+        blockquote {
+            max-width: 35em;
+            grid-column-start: card-start;
+            grid-column-end: card-end;
+            margin: 0;
 
+            ul {
+                list-style-type: disc;
+            }
         }
-    }
+
+        figure {
+            grid-column-start: card-start;
+            grid-column-end: card-end;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                margin-left: 20px;
+                width: 90px;
+                border-radius: 50%;
+            }
+    
+            figcaption {
+                margin-left: 1em;
+    
+                h3, p {
+                    margin: 0;
+                }
+
+                h3 {
+                    color: var(--theme-color-blue);
+                }
+            }
+        }
 }
 
 /* Speech bubbles, shoutout to https://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
 .triangle-border {
     position:relative;
     padding:15px;
-    margin:1em 0 3em;
+    margin:1em 0 1.5em;
     border:5px solid var(--theme-color-orange);
     /* color:#333;
     background:#fff; */

@@ -93,7 +93,8 @@
             <section class="testimonials">
                 <h2>What people say about me</h2>
 
-                <sl-carousel pagination navigation mouse-dragging loop style="--aspect-ratio: auto;">
+                <!-- TODO only auto-play and have buttons when not all slide shown -->
+                <sl-carousel pagination navigation mouse-dragging autoplay autoplay-interval="6000" loop slides-per-page="2" style="--aspect-ratio: auto;">
                     <sl-carousel-item>
                         <blockquote class="triangle-border">
                             <p>I knew Pieter because he worked in a feature team I talked to regularly, and asked him to join my (Platform) team, basically because Pieter is the kind of guy you would want in any team. A critical thinker who challenges the status quo where needed.</p>
@@ -106,15 +107,23 @@
                         </blockquote>
                         <figure>
                             <img src="/static/images/jouke.jpeg">
+                            <figcaption>
+                                <h3>Jouke Visser</h3>
+                                <p>Rabobank</p>
+                            </figcaption>
                         </figure>
                     </sl-carousel-item>
                     <sl-carousel-item>
                         <blockquote class="triangle-border">
-                            <p>Pieter is a passionate and experienced lead developer, who is not only an excellent developer, but he is also a conceptual thinker and easily thinks out of the box. He is a good listener and can explain difficult technical solutions in a simple way. He also presents well and entertaining. It is really a joy to work with Pieter!</p>
+                            <p>Pieter is a passionate and experienced lead developer, who is not only an excellent developer, but he is also a conceptual thinker and easily thinks out of the box.
+                                <br/>He is a good listener and can explain difficult technical solutions in a simple way. He also presents well and entertaining. It is really a joy to work with Pieter!</p>
                         </blockquote>
                         <figure>
                             <img src="/static/images/helen.jpeg">
-                            <figcaption>Helen Blom</figcaption>
+                            <figcaption>
+                                <h3>Helen Blom</h3>
+                                <p>Rabobank</p>
+                            </figcaption>
                         </figure>
                     </sl-carousel-item>
                 </sl-carousel>
