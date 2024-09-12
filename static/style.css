@@ -15,6 +15,16 @@ h2 {
     color: var(--theme-color-blue);
 }
 
+a,
+a:visited {
+    color: var(--theme-color-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 body {
     font-family: "Exo", sans-serif;
     font-optical-sizing: auto;
@@ -69,7 +79,7 @@ body {
             color: var(--theme-color-orange);
         }
     }
-    
+
     aside {
         grid-area: side;
 
@@ -83,6 +93,31 @@ body {
 
         > dl {
             width: 19.5em;
+        }
+
+        dl#official-content {
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+
+            padding-bottom: 1.2em;
+            margin-bottom: 1em;
+            background: linear-gradient(var(--theme-color-orange) 0 0) bottom /5em 4px no-repeat;
+
+            dt {
+                font-weight: bold;
+                color: var(--theme-color-blue);
+                justify-self: end;
+            }
+            
+            dd {
+                margin-left: 1em;
+            }
+        }
+
+        dl#dna {
+            margin-top: 0;
 
             dt {
                 font-weight: 900;
@@ -112,21 +147,26 @@ body {
 
         hr {
             width: 5em;
-            margin: 2em 0 0 0;
+            margin: 7em 0 0 0;
             align-self: center;
             border: 2px solid var(--theme-color-orange);
+        }
+
+        > section:not(:first-child) {
+            margin-top: 7em;
+            padding: 0.5em;
+            background: linear-gradient(var(--theme-color-orange) 0 0) top /5em 4px no-repeat;
         }
     }
 }
 
-section.services {
+section#services {
     display: grid;
     grid-template-columns: [dev-start] 1fr [cloud-start] 1fr [dx-start] 1fr [arch-start] 1fr [arch-end];
     grid-template-rows: [icon-start] 6em [title-start] auto [caption-start] auto [caption-end];
     justify-items: center;
     align-items: center;
     column-gap: 1.5em;
-    margin-bottom: 5em;
 
     figure {
         display: contents;
@@ -169,7 +209,28 @@ section.services {
     }
 }
 
-section.testimonials {
+section#aboutme {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    h2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+    }
+
+    figure {
+        align-self: center;
+        
+        img {
+            border-radius: 50%;
+            margin-left: 2em;
+            width: 11em;
+        }
+    }
+}
+
+section#testimonials {
     display: flex;
     flex-direction: column;
     width: 100%;

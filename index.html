@@ -25,15 +25,30 @@
             </figure>
 
             <nav>
-                <a href="#">Services</a> <!-- Diensten -->
-                <a href="#">Testimonials</a> <!-- Anderen over mij -->
-                <a href="#">About me</a> <!-- Over mij -->
-                <a href="#">Blog</a> <!-- Blog -->
+                <a href="#services">Services</a> <!-- Diensten -->
+                <a href="#aboutme">About me</a> <!-- Over mij -->
+                <a href="#testimonials">Testimonials</a> <!-- Anderen over mij -->
+                <a href="#skills">Skills</a> <!-- Vaardigheden -->
+                <!-- <a href="#">Blog</a> -->
             </nav>
         </header>
 
         <aside>
-            <dl>
+            <dl id="official-content">
+                <dt>E-mail</dt>
+                <dd><a href="mailto: pieter.van.ede@unlock-it.nl">pieter.van.ede@unlock-it.nl</a></dd>
+
+                <dt>Location</dt>
+                <dd><a target="_blank" href="https://www.google.nl/maps/place/IJsselstein/@52.026242,4.9866589,13z/data=!3m1!4b1!4m6!3m5!1s0x47c664ceb8590397:0x400de5a8d1e7a80!8m2!3d52.0177649!4d5.0403003!16zL20vMHZrc2c?entry=ttu&g_ep=EgoyMDI0MDkxMC4wIKXMDSoASAFQAw%3D%3D">IJsselstein - The Netherlands</a></dd>
+
+                <dt>C. of C. no.</dt>
+                <dd>86424173</dd>
+
+                <dt>VAT no.</dt>
+                <dd>NL004246997B47</dd>
+            </dl>
+
+            <dl id="dna">
                 <dt>Passionate</dt>
                 <dd>I am passionate about IT. From frontend to backend, CI/CD to cloud, languages to frameworks.</dd>
 
@@ -46,14 +61,10 @@
                 <dt>Innovation</dt>
                 <dd>Technology holds the potential to help organisations get to the next level. I am always on the lookout for technologies (or applications thereof) that can help an organisation accelerate.</dd>
             </dl>
-
-            <ul>
-                <li>linkedin</li>
-            </ul>
         </aside>
 
         <section>
-            <section class="services">
+            <section id="services">
                 <figure>
                     {% icon "phosphor:code-duotone" %}
                     <figcaption>
@@ -86,12 +97,26 @@
                     </figcaption>
                 </figure>
 
-                <p class="interested">Interested how I can help your organisation? <a href="#">Contact me</a> to find out!</p>
+                <p class="interested">Interested how I can help your organisation? <a href="mailto: pieter.van.ede@unlock-it.nl">Contact me</a> to find out!</p>
             </section>
 
-            <hr>
+            <section id="aboutme">
+                <h2>About me</h2>
+                
+                <section>
+                    <p>Hello, nice to meet! I am Pieter, an experienced developer who enjoys being a Swiss army knife in any development team. I like getting into the code as much
+                    as explaining the code to business and managers. But I also find a smooth development process important, so I always look for ways to make a team
+                    perform even better. For instance by optimizing CI/CD usage, or improving the adoption of cloud, or writing technical stories or even target architectures
+                    to bring an application to the next level.</p>
 
-            <section class="testimonials">
+                    <p>If you would like to know more about me, then feel free to see what <a href="#testimonials">others say about me</a>, or see what <a href="#skills">skills</a> I can offer to your organisation.</p>
+                </section>
+                <figure class="myself">
+                    <img src="./static/images/pieterkopie.jpg" />
+                </figure>
+            </section>
+
+            <section id="testimonials">
                 <h2>What people say about me</h2>
 
                 <!-- TODO only auto-play and have buttons when not all slide shown -->
@@ -130,13 +155,6 @@
                 </sl-carousel>
             </section>
 
-            <section>
-                story about who I am
-
-                <figure class="myself">
-                    <img src="./static/images/pieter.jpg" />
-                </figure>
-            </section>
         </section>
     </body>
 </html>
