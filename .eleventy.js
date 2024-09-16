@@ -10,6 +10,10 @@ module.exports = function(eleventyConfig) {
             {
                 name: 'phosphor',
                 path: 'node_modules/@phosphor-icons/core/assets/duotone'
+            },
+            {
+                name: 'devicon',
+                path: 'static/iconify/devicon'
             }
         ]
     });

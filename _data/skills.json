@@ -1,0 +1,13 @@
+[
+    {
+        "category": "Frontend",
+        "skills": [
+            {
+                "title": "Angular",
+                "icon": "devicon:angular",
+                "yearsExperience": 3,
+                "experienceLevel": "advanced"
+            }
+        ]
+    }
+]
