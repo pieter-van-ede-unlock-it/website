@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install": "npm run export-iconify-to-svg",
+    "export-iconify-to-svg": "node export-iconify-to-svg.mjs",
     "serve": "npx @11ty/eleventy --serve"
   },
   "repository": {
@@ -25,6 +27,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "eleventy-plugin-icons": "^4.5.1"
+    "@iconify/tools": "^4.0.6",
+    "eleventy-plugin-icons": "^4.5.1",
+    "rimraf": "^6.0.1"
   }
 }
